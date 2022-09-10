@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee with me</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+        #grid-container{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 84%;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 160px 160px 160px;
+            grid-template-areas: 
+            "capp ameri esp"
+            "macc mocha coca"
+            "pila rist affo";
+            grid-gap: 20px;
+            font-family: 'Lato', sans-serif;
+
+        }
+
+        
+        #grid-container > div{
+            padding: 20px;box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            border-radius: 16px;
+        }
+
+        #capp{
+            grid-area: capp;
+            
+        }
+        #ameri{
+            grid-area: ameri;
+        }
+        #esp{
+            grid-area: esp;
+        }
+        #macc{
+            grid-area: macc;
+        }
+        #mocha{
+            grid-area: mocha;
+        }
+        #coca{
+            grid-area: coca;
+        }
+        #pila{
+            grid-area: pila;
+        }
+        #rist{
+            grid-area: rist;
+        }
+        #affo{
+            grid-area: affo;
+        }
+        p{
+            /* width: 90%; */
+            font-size: 18px;
+            color: gray;
+            /* margin: auto; */
+        }
+        h4{
+            position: relative;
+            top: -16px;
+            float: right;
+            font-size: 22px;
+            color: #ba8e3e;
+        }
+    </style>
+</head>
+<body>
+    <div id="grid-container">
+
+        <div id="capp">
+            <h4>$49</h4>
+            <h2>Cappuccino</h2>
+            <p>Usage of the Internet is becoming more common due to rapid advance</p>
+        </div>
+        <div id="ameri">
+            <h4>$49</h4>
+            <h2>Americano</h2>
+            <p>Usage of the Internet is becoming more common due to rapid advance</p>
+ 
+        </div>
+        <div id="esp">
+            <h4>$49</h4>
+            <h2>Espresso</h2>
+            <p>Usage of the Internet is becoming more common due to rapid advance</p>
+ 
+        </div>
+        <div id="macc">
+            <h4>$49</h4>
+            <h2>Macchiato</h2>
+            <p>Usage of the Internet is becoming more common due to rapid advance</p>
+ 
+        </div>
+        <div id="mocha">
+            <h4>$49</h4>
+            <h2>Mocha</h2>
+            <p>Usage of the Internet is becoming more common due to rapid advance</p>
+ 
+        </div>
+        <div id="cola">
+            <h4>$49</h4>
+            <h2>Coffee Latte</h2>
+            <p>Usage of the Internet is becoming more common due to rapid advance</p>
+ 
+        </div>
+        <div id="pila">
+            <h4>$49</h4>
+            <h2>Piccolo Latte</h2>
+            <p>Usage of the Internet is becoming more common due to rapid advance</p>
+ 
+        </div>
+        <div id="rist">
+            <h4>$49</h4>
+            <h2>Ristretto</h2>
+            <p>Usage of the Internet is becoming more common due to rapid advance</p>
+ 
+        </div>
+        <div id="affo">
+            <h4>$49</h4>
+            <h2>Affogato</h2>
+            <p>Usage of the Internet is becoming more common due to rapid advance</p>
+ 
+        </div>
+    </div>
+</body>
+</html>

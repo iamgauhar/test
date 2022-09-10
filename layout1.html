@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid layout 1</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: 100px 400px;
+            width: 60%;
+            grid-gap: 20px;
+            margin: auto;
+        }
+        #nav{
+            border: 1px solid red;
+            grid-area: 1 / 1 / 2 / 3;
+            background-color: burlywood;
+        }
+        #box1{
+            background-color: violet;
+            grid-area: 2 / 1 / 3 / 2;
+        }
+        #box2{
+            background-color: cadetblue;
+            grid-area: 2 / 2 / 3 / 3;
+        }
+
+        @media screen and (max-width: 600px){
+            #container{
+                grid-template-rows: 100px 200px 200px;
+            }
+            #box1{
+                grid-area: 2/1/3/3;
+            }
+            #box2{
+                grid-area: 3 / 1 / 4 / 3;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+        <div id="nav"><h1>Navigation</h1></div>
+        <div id="box1"><h1>Box-1</h1></div>
+        <div id="box2">Box-2</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator using grid</title>
+    <style>
+        #container{
+            position: absolute;
+            display: grid;
+            grid-template-columns: 70px 70px 70px 70px;
+            grid-template-rows: 100px 70px 70px 70px 70px;
+            grid-template-areas:
+            "display display display display"
+            "one two three plus"
+            "four five six minus"
+            "seven eight nine multiple"
+            "clear zro equal devid";
+            grid-gap: 8px;
+            padding: 20px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #container *{
+            border-radius: 10px;
+
+        }
+
+        #display{
+            grid-area: display;
+            box-shadow: rgba(86, 86, 214, 0.25) 0px 6px 12px -2px, rgba(49, 241, 255, 0.3) 0px 3px 7px -3px;
+            border-radius: 10px;
+            
+        }
+        .one{
+            grid-area: one;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            
+            top: 50%;
+        }
+        .two{
+            grid-area: two;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            
+            
+
+        }
+        .three{
+            grid-area: three;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            
+
+        }
+        .plus{
+            grid-area: plus;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            
+            color: #fff;
+            background-color: #000000;
+
+        }
+        .four{
+            grid-area: four;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            
+        }
+        .five{
+            grid-area: five;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+          
+
+        }
+        .six{
+            grid-area: six;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            
+
+        }
+        .minus{
+            grid-area: minus;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+           
+            color: #fff;
+            background-color: #000000;
+
+        }
+        .seven{
+            grid-area: seven;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+           
+
+        }
+        .eight{
+            grid-area: eight;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            
+
+        }
+        .nine{
+            grid-area: nine;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            
+
+        }
+        .multiple{
+            grid-area: multiple;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            
+            color: #fff;
+            background-color: #000000;
+
+        }
+        .clear{
+            grid-area: clear;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            
+            color: #fff;
+            background-color: #ff0000;
+
+        }
+        .zero{
+            grid-area: zro;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            
+            
+            
+        }
+        .equal{
+            grid-area: equal;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+           
+            color: #fff;
+            background-color: #000000;
+
+        }
+        .devid{
+            grid-area: devid;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            
+            color: #fff;
+            background-color: #000000;
+
+        }
+        h1{
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Masai Calculator</h1>
+    <div id="container">
+        <div id="display"></div>
+        <div class="one"><h1>1</h1></div>
+        <div class="two"><h1>2</h1></div>
+        <div class="three"><h1>3</h1></div>
+        <div class="plus"><h1>+</h1></div>
+        <div class="four"><h1>4</h1></div>
+        <div class="five"><h1>5</h1></div>
+        <div class="six"><h1>6</h1></div>
+        <div class="minus"><h1>-</h1></div>
+        <div class="seven"><h1>7</h1></div>
+        <div class="eight"><h1>8</h1></div>
+        <div class="nine"><h1>9</h1></div>
+        <div class="multiple"><h1>x</h1></div>
+        <div class="clear"><h1>C</h1></div>
+        <div class="zero"><h1>0</h1></div>
+        <div class="equal"><h1>=</h1></div>
+        <div class="devid"><h1>/</h1></div>
+    </div>
+</body>
+</html>

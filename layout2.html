@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 32% 32% 32%;
+            grid-template-rows: 10% 30% 30% 30%;
+            grid-gap: 20px;
+        }
+
+        #nav{
+            grid-area: 1 / 1 / 2 / 4;
+            background-color: burlywood;
+        }
+
+        #main-box{
+            grid-area: 2/1/5/3;
+            background-color: turquoise;
+        }
+
+        #side1{
+            grid-area: 2/3/3/4;
+            background-color: violet;
+        }
+        #side2{
+            grid-area: 3/3/4/4;
+            background-color: yellowgreen;
+        }
+        #side3{
+            grid-area: 4/3/5/4;
+            background-color: tomato;
+        }
+
+        @media screen and (max-device-width: 1024px){
+            #main-box{
+                grid-area: 2/1/4/4;
+            }
+
+            #side1{
+                grid-area: 4/1/5/2;
+            }
+            #side2{
+                grid-area: 4/2/5/3;
+            }
+            #side3{
+                grid-area: 4/3/5/4;
+            }
+        }
+
+        @media screen and (max-device-width: 768px){
+            #container{
+                grid-template-rows: 10% 30% 20% 20% 20%;
+            }
+            #main-box{
+                grid-area: 2/1/2/4;
+            }
+
+            #side1{
+                grid-area: 3/1/4/4;
+            }
+            #side2{
+                grid-area: 4/1/5/4;
+            }
+            #side3{
+                grid-area: 5/1/6/4;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="nav"><h1>Navigation</h1></div>
+        <div id="main-box"><h1>Main</h1></div>
+        <div id="side1"><h1>Side Box 1</h1></div>
+        <div id="side2"><h1>Side Box 2</h1></div>
+        <div id="side3"><h1>Side Box 3</h1></div>
+        
+
+    </div>
+</body>
+</html>
